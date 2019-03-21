@@ -1,3 +1,26 @@
+HMEQ_ica
+[[-0.00019246 -0.0010944   0.00735465  0.00150106]
+ [ 0.00034607  0.00196787 -0.01322456 -0.0026991 ]]
+Data Length: 5960
+Cluster 1: 3833
+Cluster 2: 2127
+Final Performance on Test Set
+MSE: 0.45671140939597316
+
+Accuracy Score: 54.32885906040269%
+
+F1 Score: 0.17913148371531967
+
+              precision    recall  f1-score   support
+
+           0       0.77      0.62      0.68      4771
+           1       0.14      0.25      0.18      1189
+
+   micro avg       0.54      0.54      0.54      5960
+   macro avg       0.45      0.43      0.43      5960
+weighted avg       0.64      0.54      0.58      5960
+
+
 Best parameters set found on development set:
 
 {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
@@ -11,9 +34,9 @@ Detailed classification report:
 The model is trained on the full development set.
 The scores are computed on the full evaluation set.
 
-Train Time:  0.24933954700000527
+Train Time:  0.2668140569999906
 
-Test Time:  0.00016344799999501447
+Test Time:  0.000167869000009091
 
 Final Performance on Test Set
 MSE: 0.19966442953020133

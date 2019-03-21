@@ -1,3 +1,26 @@
+HMEQ_rca
+[[  61930.28915455   22299.06137628  -46769.49667072 -104906.04971856]
+ [ 164027.95229383   56291.0806846  -111722.41354444 -237171.39783646]]
+Data Length: 5960
+Cluster 1: 4784
+Cluster 2: 1176
+Final Performance on Test Set
+MSE: 0.3263422818791946
+
+Accuracy Score: 67.36577181208054%
+
+F1 Score: 0.17758985200845667
+
+              precision    recall  f1-score   support
+
+           0       0.80      0.80      0.80      4771
+           1       0.18      0.18      0.18      1189
+
+   micro avg       0.67      0.67      0.67      5960
+   macro avg       0.49      0.49      0.49      5960
+weighted avg       0.67      0.67      0.67      5960
+
+
 Best parameters set found on development set:
 
 {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
@@ -11,9 +34,9 @@ Detailed classification report:
 The model is trained on the full development set.
 The scores are computed on the full evaluation set.
 
-Train Time:  0.12088143399999751
+Train Time:  0.11645348100000774
 
-Test Time:  0.00017440300000259867
+Test Time:  0.00016985899999610865
 
 Final Performance on Test Set
 MSE: 0.3959731543624161

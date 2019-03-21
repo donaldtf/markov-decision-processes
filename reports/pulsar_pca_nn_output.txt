@@ -1,3 +1,26 @@
+Pulsar_pca
+[[-33.00917271  -2.11708015  -0.33086488   0.29682539]
+ [195.98236729  12.56954798   1.96441407  -1.76231445]]
+Data Length: 17898
+Cluster 1: 15311
+Cluster 2: 2587
+Final Performance on Test Set
+MSE: 0.23287518158453457
+
+Accuracy Score: 76.71248184154655%
+
+F1 Score: 0.01372456223379082
+
+              precision    recall  f1-score   support
+
+           0       0.89      0.84      0.87     16259
+           1       0.01      0.02      0.01      1639
+
+   micro avg       0.77      0.77      0.77     17898
+   macro avg       0.45      0.43      0.44     17898
+weighted avg       0.81      0.77      0.79     17898
+
+
 Best parameters set found on development set:
 
 {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
@@ -11,9 +34,9 @@ Detailed classification report:
 The model is trained on the full development set.
 The scores are computed on the full evaluation set.
 
-Train Time:  1.9843992509999993
+Train Time:  1.8836648609999997
 
-Test Time:  0.00029861699999855773
+Test Time:  0.0002469490000009955
 
 Final Performance on Test Set
 MSE: 0.021229050279329607

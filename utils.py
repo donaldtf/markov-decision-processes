@@ -28,11 +28,6 @@ def get_pulsar_data():
 
     return x, y
 
-def get_pulsar_data_split():
-    pulsar_x, pulsar_y = get_pulsar_data()
-
-    return split_data(pulsar_x, pulsar_y)
-
 def split_data(x, y):
     x_train, x_test, y_train, y_test = train_test_split(x, y, stratify=y, test_size=0.10, random_state=99)
 
@@ -60,11 +55,6 @@ def get_hmeq_data():
     x = pd.DataFrame(imp.fit_transform(x))
 
     return x, y
-
-def get_hmeq_split_data():
-    hmeq_x, hmeq_y = get_hmeq_data()
-
-    return split_data(hmeq_x, hmeq_y)
 
 # Thanks to this link for some wonderful examples
 # https://scikit-learn.org/stable/auto_examples/model_selection/plot_grid_search_digits.html
@@ -222,28 +212,6 @@ def plot_iterations(estimator, title, X, y, param_name, param_range, ylim=None, 
              label="Cross-validation score")
 
     plt.legend(loc="best")
-
-    plt.savefig(file_name)
-
-# Thanks to Winnie Yeung for posting this in Piazza 
-# https://piazza.com/class/jql7qq4dehu3c?cid=253
-def plot_boosting_iteration_curve(clf, file_name, title, x_test, y_test):
-    plt.figure()
-    real_test_errors = []
-
-    for real_test_predict in clf.staged_predict(x_test):
-        real_test_errors.append(f1_score(real_test_predict, y_test))
-
-    n_trees_discrete = len(clf)
-
-    plt.figure()
-    plt.grid()
-    plt.plot(range(1, n_trees_discrete + 1),
-            real_test_errors, 'o-', color="g", label='Score')
-    plt.legend()
-    plt.ylabel('F1 Score')
-    plt.xlabel('Number of Trees')
-    plt.title(title)
 
     plt.savefig(file_name)
 

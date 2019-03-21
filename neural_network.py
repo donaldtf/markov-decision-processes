@@ -2,8 +2,7 @@ import numpy as np
 # Thanks to Scikit-learn
 # Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, pp. 2825-2830, 2011.
 from sklearn.neural_network import MLPClassifier
-from utils import get_hmeq_split_data, get_pulsar_data_split, run_optimized, plot_learning_curve, get_optimized_classifier, plot_iterations
-import sys
+from utils import run_optimized, plot_learning_curve, get_optimized_classifier, plot_iterations
 
 # https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
 
@@ -11,8 +10,6 @@ import sys
 # https://www.kaggle.com/hatone/mlpclassifier-with-gridsearchcv
 
 def run_nn(name, x_train, x_test, y_train, y_test):
-    print ("Working on {} data...".format(name))
-
     tuned_parameters = {
         'max_iter': [1000],
         'alpha': [0.001],
@@ -56,18 +53,3 @@ def run_nn(name, x_train, x_test, y_train, y_test):
     #     param_name="max_iter",
     #     param_range=iter_range
     #     )
-
-    print ("Finished {} Neural Net!".format(name))
-    print()
-
-# if __name__ == "__main__":
-#     print ("Running Neural Net Code, this should take a minute or two")
-
-#     x_train, x_test, y_train, y_test = get_pulsar_data_split()
-#     run_nn("Pulsar", x_train, x_test, y_train, y_test)
-
-#     x_train, x_test, y_train, y_test = get_hmeq_split_data()
-#     run_nn("HMEQ", x_train, x_test, y_train, y_test)
-
-#     print ("Finished Running Neural Net")
-
