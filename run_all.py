@@ -33,10 +33,10 @@ def run_data_set(get_data_fn, name):
     x_train, x_test, y_train, y_test = split_data(data_x, data_y)
     run_nn(name, x_train, x_test, y_train, y_test)
 
-    sys.stdout = sys.__stdout__
-
     # Cluster Original (#1)
     cluster(name, data_x, data_y)
+
+    sys.stdout = sys.__stdout__
 
     # Transforms
     run_transform("{}_pca".format(name), data_x, data_y, run_pca)
