@@ -1,0 +1,34 @@
+Best parameters set found on development set:
+
+{'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Grid scores on development set:
+
+0.825 (+/-0.019) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+Train Time:  4.096311843999999
+
+Test Time:  0.0003683949999953029
+
+Final Performance on Test Set
+MSE: 0.02569832402234637
+
+Accuracy Score: 97.43016759776536%
+
+F1 Score: 0.8476821192052981
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.99      1626
+           1       0.93      0.78      0.85       164
+
+   micro avg       0.97      0.97      0.97      1790
+   macro avg       0.95      0.89      0.92      1790
+weighted avg       0.97      0.97      0.97      1790
+
+

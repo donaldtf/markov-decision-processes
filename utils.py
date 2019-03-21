@@ -26,6 +26,14 @@ def get_pulsar_data():
     y = pulsar[target]
     x = pulsar[features]
 
+    return x, y
+
+def get_pulsar_data_split():
+    pulsar_x, pulsar_y = get_pulsar_data()
+
+    return split_data(pulsar_x, pulsar_y)
+
+def split_data(x, y):
     x_train, x_test, y_train, y_test = train_test_split(x, y, stratify=y, test_size=0.10, random_state=99)
 
     return x_train, x_test, y_train, y_test
@@ -51,9 +59,12 @@ def get_hmeq_data():
     imp = SimpleImputer(strategy="constant", fill_value=-1)
     x = pd.DataFrame(imp.fit_transform(x))
 
-    x_train, x_test, y_train, y_test = train_test_split(x, y, stratify=y, test_size=0.10, random_state=99)
+    return x, y
 
-    return x_train, x_test, y_train, y_test
+def get_hmeq_split_data():
+    hmeq_x, hmeq_y = get_hmeq_data()
+
+    return split_data(hmeq_x, hmeq_y)
 
 # Thanks to this link for some wonderful examples
 # https://scikit-learn.org/stable/auto_examples/model_selection/plot_grid_search_digits.html

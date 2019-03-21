@@ -1,45 +1,63 @@
 import timeit
-from decision_tree import run_pulsar_dt, run_hmeq_dt
-from knn import run_hmeq_knn, run_pulsar_knn
-from boosting import run_hmeq_boosting, run_pulsar_boosting
-from svm import run_hmeq_svm, run_pulsar_svm
-from neural_network import run_hmeq_nn, run_pulsar_nn
+from neural_network import run_nn
+from utils import get_hmeq_data, get_pulsar_data, split_data
+from projections import run_pca, run_ica, run_rca
+from kmeans import cluster
+
+def run_transform(name, data_x, data_y, transformer):
+    report_name = "reports/{}_nn_output.txt".format(name)
+    sys.stdout = open(report_name, "w")
+
+    new_x = transformer(data_x)
+    x_train, x_test, y_train, y_test = split_data(new_x, data_y)
+
+    cluster(name, new_x, data_y)
+
+    run_nn(name, x_train, x_test, y_train, y_test)
+
+    sys.stdout = sys.__stdout__
+
 
 start = timeit.default_timer()
 
-print ("---- Decision Tree ----")
-print()
+# Pulsar
+pulsar_x, pulsar_y = get_pulsar_data()
 
-run_hmeq_dt()
-run_pulsar_dt()
+# Pulsar Original
+report_name = "reports/Pulsar_nn_output.txt"
+sys.stdout = open(report_name, "w")
 
-print()
-print ("---- KNN ----")
-print()
+x_train, x_test, y_train, y_test = split_data(pulsar_x, pulsar_y)
+run_nn("Pulsar", x_train, x_test, y_train, y_test)
 
-run_hmeq_knn()
-run_pulsar_knn()
+sys.stdout = sys.__stdout__
 
-print()
-print ("---- Boosting ----")
-print()
+# Cluser Original
+cluster("Pulsar", pulsar_x, pulsar_y)
 
-run_hmeq_boosting()
-run_pulsar_boosting()
+# Pulsar Transforms
+run_transform("pulsar_pca", pulsar_x, pulsar_y, run_pca)
+run_transform("pulsar_ica", pulsar_x, pulsar_y, run_ica)
+run_transform("pulsar_rca", pulsar_x, pulsar_y, run_rca)
 
-print()
-print ("---- SVM ----")
-print()
 
-run_hmeq_svm()
-run_pulsar_svm()
+# HMEQ
+hmeq_x, hmeq_y = get_hmeq_data()
 
-print()
-print ("---- Neural Network ----")
-print()
+# HMEQ Original
+report_name = "reports/HMEQ_nn_output.txt"
+sys.stdout = open(report_name, "w")
 
-run_hmeq_nn()
-run_pulsar_nn()
+x_train, x_test, y_train, y_test = split_data(hmeq_x, hmeq_y)
+run_nn("HMEQ", x_train, x_test, y_train, y_test)
+
+sys.stdout = sys.__stdout__
+
+# HMEQ Transforms
+run_transform("hmeq_pca", hmeq_x, hmeq_y, run_pca)
+run_transform("hmeq_ica", hmeq_x, hmeq_y, run_ica)
+run_transform("hmeq_rca", hmeq_x, hmeq_y, run_rca)
+
 
 stop = timeit.default_timer()
 total_time = stop - start

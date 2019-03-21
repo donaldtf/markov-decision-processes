@@ -4,35 +4,16 @@ Best parameters set found on development set:
 
 Grid scores on development set:
 
-0.257 (+/-0.065) for {'alpha': 0.1, 'hidden_layer_sizes': 10, 'max_iter': 1000, 'random_state': 99}
-0.241 (+/-0.180) for {'alpha': 0.1, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
-0.256 (+/-0.129) for {'alpha': 0.1, 'hidden_layer_sizes': 12, 'max_iter': 1000, 'random_state': 99}
-0.289 (+/-0.050) for {'alpha': 0.1, 'hidden_layer_sizes': 13, 'max_iter': 1000, 'random_state': 99}
-0.194 (+/-0.157) for {'alpha': 0.1, 'hidden_layer_sizes': 14, 'max_iter': 1000, 'random_state': 99}
-0.262 (+/-0.046) for {'alpha': 0.01, 'hidden_layer_sizes': 10, 'max_iter': 1000, 'random_state': 99}
-0.298 (+/-0.238) for {'alpha': 0.01, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
-0.292 (+/-0.115) for {'alpha': 0.01, 'hidden_layer_sizes': 12, 'max_iter': 1000, 'random_state': 99}
-0.218 (+/-0.110) for {'alpha': 0.01, 'hidden_layer_sizes': 13, 'max_iter': 1000, 'random_state': 99}
-0.204 (+/-0.122) for {'alpha': 0.01, 'hidden_layer_sizes': 14, 'max_iter': 1000, 'random_state': 99}
-0.259 (+/-0.089) for {'alpha': 0.001, 'hidden_layer_sizes': 10, 'max_iter': 1000, 'random_state': 99}
 0.353 (+/-0.278) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
-0.226 (+/-0.154) for {'alpha': 0.001, 'hidden_layer_sizes': 12, 'max_iter': 1000, 'random_state': 99}
-0.217 (+/-0.111) for {'alpha': 0.001, 'hidden_layer_sizes': 13, 'max_iter': 1000, 'random_state': 99}
-0.247 (+/-0.139) for {'alpha': 0.001, 'hidden_layer_sizes': 14, 'max_iter': 1000, 'random_state': 99}
-0.273 (+/-0.062) for {'alpha': 0.0001, 'hidden_layer_sizes': 10, 'max_iter': 1000, 'random_state': 99}
-0.295 (+/-0.176) for {'alpha': 0.0001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
-0.221 (+/-0.145) for {'alpha': 0.0001, 'hidden_layer_sizes': 12, 'max_iter': 1000, 'random_state': 99}
-0.217 (+/-0.111) for {'alpha': 0.0001, 'hidden_layer_sizes': 13, 'max_iter': 1000, 'random_state': 99}
-0.216 (+/-0.146) for {'alpha': 0.0001, 'hidden_layer_sizes': 14, 'max_iter': 1000, 'random_state': 99}
 
 Detailed classification report:
 
 The model is trained on the full development set.
 The scores are computed on the full evaluation set.
 
-Train Time:  0.319319360999998
+Train Time:  0.27950514799999837
 
-Test Time:  0.005104095999996616
+Test Time:  0.0006630400000062764
 
 Final Performance on Test Set
 MSE: 0.18624161073825504
