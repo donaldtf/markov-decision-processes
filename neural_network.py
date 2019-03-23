@@ -6,29 +6,10 @@ from utils import run_optimized, plot_learning_curve
 
 # https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
 
-# Thanks to this source for showing grid search with a neural net
-# https://www.kaggle.com/hatone/mlpclassifier-with-gridsearchcv
-
 def run_nn(name, x_train, x_test, y_train, y_test):
-    # tuned_parameters = {
-    #     'max_iter': [1000],
-    #     'alpha': [0.001],
-    #     'hidden_layer_sizes': [11],
-    #     'random_state':[99]
-    #     }
-
     img_name = "images/{}_nn_learning_curve.png".format(name)
     img_title = '{} Neural Net Learning Curve'.format(name)
     iter_title = '{} Neural Net Iteration Learning Curve'.format(name)
-
-    # clf = get_optimized_classifier(
-    #     estimator=MLPClassifier(),
-    #     tuned_parameters=tuned_parameters,
-    #     x_train=x_train,
-    #     y_train=y_train
-    #     )
-
-    # best_params = clf.best_params_
 
     optimized_clf = MLPClassifier(max_iter=1000, alpha=0.001, hidden_layer_sizes=11, random_state=99)
 

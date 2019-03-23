@@ -1,12 +1,28 @@
 from sklearn.cluster import KMeans
 from sklearn.mixture import GaussianMixture
 from scipy.spatial.distance import cdist
+import seaborn as sb
+import pandas as pd
 import matplotlib as mpl
 mpl.use('agg')
 import matplotlib.pyplot as plt
 import math
 import numpy as np
 from kneed import DataGenerator, KneeLocator
+
+# https://towardsdatascience.com/feature-selection-with-pandas-e3690ad8504b
+def plot_corr(name, x, y):
+    x_copy = x.copy()
+    x_copy['Target'] = y
+    cor = x_copy.corr()
+    
+    # plt.figure()
+    plt.figure(figsize=(12,10))
+    plt.title('Feature Correlation Heat Map for {}'.format(name))
+    plt.tight_layout()
+    plt.autoscale()
+    sb.heatmap(cor, annot=True, cmap=plt.cm.Reds)
+    plt.savefig("features/{}.png".format(name), bbox_inches='tight')
 
 # https://pythonprogramminglanguage.com/kmeans-elbow-method/
 def get_optimal_k(name, X):
@@ -36,26 +52,30 @@ def get_optimal_k(name, X):
 
     return knee
 
-def kmeans(name, x):
+def kmeans(name, x, y):
     optimal_k = get_optimal_k(name, x)
     kmeans = KMeans(n_clusters=optimal_k, random_state=99).fit(x)
 
     labels = list(kmeans.labels_)
 
-    print ("cluster_centers_")
-    print (kmeans.cluster_centers_)
+    encoded = pd.get_dummies(labels)
+    plot_corr(name, encoded, y)
+
     print ("selected k: " + str(optimal_k))
 
-    return np.reshape(kmeans.labels_, (-1, 1))
+    return encoded
 
 # Credit to: https://github.com/cmaron/CS-7641-assignments/blob/master/assignment3/experiments/clustering.py
-def gmm(name, x):
+def gmm(name, x, y):
     gmm = GaussianMixture(n_components=4, random_state=99)
 
     gmm.fit(x)
     gmm_labels = gmm.predict(x)
 
+    encoded = pd.get_dummies(gmm_labels)
+    plot_corr(name, encoded, y)
+
     print ("GMM Labels")
     print (gmm_labels)
 
-    return np.reshape(gmm_labels, (-1, 1))
+    return encoded

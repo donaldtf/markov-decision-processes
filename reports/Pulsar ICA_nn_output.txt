@@ -1,0 +1,67 @@
+Number of components: 4
+selected k: 6
+GMM Labels
+[0 0 0 ... 1 0 2]
+Train Time:  3.461347515
+
+Test Time:  0.0003535099999965041
+
+Final Performance on Test Set
+MSE: 0.02569832402234637
+
+Accuracy Score: 97.43016759776536%
+
+F1 Score: 0.8476821192052981
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.99      1626
+           1       0.93      0.78      0.85       164
+
+   micro avg       0.97      0.97      0.97      1790
+   macro avg       0.95      0.89      0.92      1790
+weighted avg       0.97      0.97      0.97      1790
+
+
+Train Time:  0.6254163850000083
+
+Test Time:  0.0006121890000088115
+
+Final Performance on Test Set
+MSE: 0.036312849162011177
+
+Accuracy Score: 96.36871508379889%
+
+F1 Score: 0.7653429602888087
+
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98      1626
+           1       0.94      0.65      0.77       164
+
+   micro avg       0.96      0.96      0.96      1790
+   macro avg       0.95      0.82      0.87      1790
+weighted avg       0.96      0.96      0.96      1790
+
+
+Train Time:  0.5456476659999936
+
+Test Time:  0.0006067789999946172
+
+Final Performance on Test Set
+MSE: 0.09162011173184358
+
+Accuracy Score: 90.83798882681565%
+
+F1 Score: 0.0
+
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95      1626
+           1       0.00      0.00      0.00       164
+
+   micro avg       0.91      0.91      0.91      1790
+   macro avg       0.45      0.50      0.48      1790
+weighted avg       0.83      0.91      0.86      1790
+
+

@@ -14,7 +14,7 @@ This repo contains all the code needed to reproduce my results, including the da
 
 /data - this holds the two data sets (hmeq and pulsar_stars) that are used with each algorithm
 /images - learning curves for each algorithm are output into this directory
-/iteration_curves - this holds the iteration_curves for the algorithms that have an iterative component
+/elbow_curves - kmeans elbow curves are output to this directory
 /reports - while running each algorithm, I feed the standard output into a report file here instead of to the console.
            This file holds stats on grid search results, test data performance and wall clock times
 /utils.py - this is a utility file that holds shared functionality between the algorithms 
@@ -30,6 +30,7 @@ The code relies on the following dependencies in order to run. You can install t
 - numpy
 - matplotlib
 - scipy
+- seaborn
 - kneed (directions for installing found here: https://github.com/arvkevi/kneed)
 
 Once these are all installed you should be ready to run the code
@@ -41,6 +42,3 @@ Running the code is simple once you have your dependencies installed. Simply run
 `python run_all.py`
 
 Note: Running all of the algorithms at once may take several minutes (5 - 10 minutes, depending on your machine) to complete.
-Side Note: When generating iteration graphs, you may see warnings that the function finished before it converged
-I was unable to remove these errors, but it is fine they are there since lower max_iter numbers are used purposefully for
-plotting purposes.

@@ -26,7 +26,7 @@ def run_ica(x, _y):
 
     return transformer.fit_transform(x)
 
-def run_rca(x, _y):
+def run_rp(x, _y):
     n_components = get_n_components(x)
     transformer = random_projection.GaussianRandomProjection(n_components=n_components)
 
@@ -36,7 +36,6 @@ def run_rca(x, _y):
 def run_tree_selection(x, y):
     clf = ExtraTreesClassifier(n_estimators=50)
     clf = clf.fit(x, y)
-    # clf.feature_importances_
 
     transformer = SelectFromModel(clf, prefit=True)
     
