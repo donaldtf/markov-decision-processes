@@ -1,52 +1,59 @@
 Number of components: 4
-selected k: 6
+selected k: 5
+selected n_components: 3
 GMM Labels
-[0 0 0 ... 1 0 2]
-Train Time:  3.461347515
+[0 1 0 ... 2 1 2]
+Train Time:  3.568114805999997
 
-Test Time:  0.0003535099999965041
+Test Time:  0.00042875699999456174
+
+Pulsar ICA
 
 Final Performance on Test Set
-MSE: 0.02569832402234637
+MSE: 0.024022346368715083
 
-Accuracy Score: 97.43016759776536%
+Accuracy Score: 97.5977653631285%
 
-F1 Score: 0.8476821192052981
+F1 Score: 0.8599348534201955
 
               precision    recall  f1-score   support
 
            0       0.98      0.99      0.99      1626
-           1       0.93      0.78      0.85       164
+           1       0.92      0.80      0.86       164
 
-   micro avg       0.97      0.97      0.97      1790
-   macro avg       0.95      0.89      0.92      1790
-weighted avg       0.97      0.97      0.97      1790
+   micro avg       0.98      0.98      0.98      1790
+   macro avg       0.95      0.90      0.92      1790
+weighted avg       0.98      0.98      0.98      1790
 
 
-Train Time:  0.6254163850000083
+Train Time:  0.49875286500000016
 
-Test Time:  0.0006121890000088115
+Test Time:  0.0005956779999962691
+
+Pulsar ICA KMeans Clustered
 
 Final Performance on Test Set
-MSE: 0.036312849162011177
+MSE: 0.09162011173184358
 
-Accuracy Score: 96.36871508379889%
+Accuracy Score: 90.83798882681565%
 
-F1 Score: 0.7653429602888087
+F1 Score: 0.0
 
               precision    recall  f1-score   support
 
-           0       0.97      1.00      0.98      1626
-           1       0.94      0.65      0.77       164
+           0       0.91      1.00      0.95      1626
+           1       0.00      0.00      0.00       164
 
-   micro avg       0.96      0.96      0.96      1790
-   macro avg       0.95      0.82      0.87      1790
-weighted avg       0.96      0.96      0.96      1790
+   micro avg       0.91      0.91      0.91      1790
+   macro avg       0.45      0.50      0.48      1790
+weighted avg       0.83      0.91      0.86      1790
 
 
-Train Time:  0.5456476659999936
+Train Time:  0.6320110150000033
 
-Test Time:  0.0006067789999946172
+Test Time:  0.000611973999994575
+
+Pulsar ICA GMM Clustered
 
 Final Performance on Test Set
 MSE: 0.09162011173184358

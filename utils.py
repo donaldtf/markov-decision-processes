@@ -56,7 +56,9 @@ def get_hmeq_data():
 
     return x, y
 
-def compute_stats(y_true, y_pred):
+def compute_stats(y_true, y_pred, name):
+    print (name)
+    print()
     print ("Final Performance on Test Set")
     mse = mean_squared_error(y_true, y_pred)
     print ("MSE: " + str(mse))
@@ -158,7 +160,7 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=5,
 
     plt.savefig(file_name)
 
-def run_optimized(optimized_clf, x_train, y_train, x_test, y_test):
+def run_optimized(optimized_clf, x_train, y_train, x_test, y_test, name):
     train_start = timeit.default_timer()
     optimized_clf.fit(x_train, y_train)
     train_stop = timeit.default_timer()
@@ -173,4 +175,4 @@ def run_optimized(optimized_clf, x_train, y_train, x_test, y_test):
     print('Test Time: ', test_stop - test_start)  
     print()
 
-    compute_stats(y_test, y_pred)
+    compute_stats(y_test, y_pred, name)

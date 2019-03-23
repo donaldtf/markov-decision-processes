@@ -1,31 +1,36 @@
 Number of components: 6
 selected k: 3
+selected n_components: 7
 GMM Labels
-[1 1 1 ... 0 0 0]
-Train Time:  0.15729680900000176
+[2 2 2 ... 1 1 1]
+Train Time:  0.13283042399996248
 
-Test Time:  0.00014222300001165422
+Test Time:  0.00016237899995985572
+
+HMEQ RP Run 1
 
 Final Performance on Test Set
-MSE: 0.7533557046979866
+MSE: 0.32046979865771813
 
-Accuracy Score: 24.664429530201343%
+Accuracy Score: 67.9530201342282%
 
-F1 Score: 0.32277526395173456
+F1 Score: 0.15859030837004404
 
               precision    recall  f1-score   support
 
-           0       0.77      0.08      0.15       477
-           1       0.20      0.90      0.32       119
+           0       0.79      0.81      0.80       477
+           1       0.17      0.15      0.16       119
 
-   micro avg       0.25      0.25      0.25       596
-   macro avg       0.48      0.49      0.24       596
-weighted avg       0.65      0.25      0.19       596
+   micro avg       0.68      0.68      0.68       596
+   macro avg       0.48      0.48      0.48       596
+weighted avg       0.67      0.68      0.67       596
 
 
-Train Time:  0.3751287960000127
+Train Time:  0.25126338199999054
 
-Test Time:  0.0005351820000214502
+Test Time:  0.0009337370000253031
+
+HMEQ RP Run 1 KMeans Clustered
 
 Final Performance on Test Set
 MSE: 0.19966442953020133
@@ -44,9 +49,11 @@ F1 Score: 0.0
 weighted avg       0.64      0.80      0.71       596
 
 
-Train Time:  0.21616893999998865
+Train Time:  0.23745136499996988
 
-Test Time:  0.0005290429999718071
+Test Time:  0.0005591170000229795
+
+HMEQ RP Run 1 GMM Clustered
 
 Final Performance on Test Set
 MSE: 0.19966442953020133

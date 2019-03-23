@@ -33,7 +33,6 @@ def get_optimal_k(name, X):
         kmeanModel = KMeans(n_clusters=k).fit(X)
         kmeanModel.fit(X)
         distortions.append(sum(np.min(cdist(X, kmeanModel.cluster_centers_, 'euclidean'), axis=1)) / X.shape[0])
-        # distortions.append(kmeanModel.inertia_)
 
     distortions = distortions / distortions[0]
 
@@ -65,9 +64,37 @@ def kmeans(name, x, y):
 
     return encoded
 
+# https://scikit-learn.org/stable/auto_examples/mixture/plot_gmm_selection.html
+def get_optimal_num_comps(name, X):
+    # k means determine k
+    bic = []
+    K = range(1,10)
+    for n_components in K:
+        gmm = GaussianMixture(n_components=n_components)
+        gmm.fit(X)
+        bic.append(gmm.bic(X))
+
+    kneedle = KneeLocator(K, bic, S=1.0, curve='convex', direction='decreasing')
+    knee = math.floor(kneedle.knee)
+
+    # Plot the elbow
+    plt.figure()
+    plt.plot(K, bic, 'bx-')
+    plt.axvline(x=knee, label="Selected K")
+    plt.legend(loc="best")
+    plt.xlabel('k')
+    plt.ylabel('BIC')
+    plt.title('Elbow Curve for {}'.format(name))
+    plt.savefig("elbow_curves/{}.png".format(name))
+
+    return knee
+
 # Credit to: https://github.com/cmaron/CS-7641-assignments/blob/master/assignment3/experiments/clustering.py
 def gmm(name, x, y):
-    gmm = GaussianMixture(n_components=4, random_state=99)
+    n_components = get_optimal_num_comps(name, x)
+    gmm = GaussianMixture(n_components=n_components)
+
+    print ("selected n_components: " + str(n_components))
 
     gmm.fit(x)
     gmm_labels = gmm.predict(x)

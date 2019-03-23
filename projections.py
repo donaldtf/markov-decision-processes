@@ -12,15 +12,15 @@ def get_n_components(x):
 
 def run_pca(x, _y):
     n_components = get_n_components(x)
-    pca = PCA(n_components=n_components, random_state=99)
+    pca = PCA(n_components=n_components)
 
     transformer = pca.fit(x)
 
     return transformer.transform(x)
 
 def run_ica(x, _y):
-    n_components = get_n_components(x)
-    ica = FastICA(n_components=n_components, random_state=99)
+    n_components = get_n_components(x) + 1
+    ica = FastICA(n_components=n_components, whiten=True)
 
     transformer = ica.fit(x)
 

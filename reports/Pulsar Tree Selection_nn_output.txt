@@ -1,9 +1,12 @@
 selected k: 4
+selected n_components: 2
 GMM Labels
-[1 1 0 ... 1 1 2]
-Train Time:  1.9605058570000011
+[1 1 1 ... 1 1 0]
+Train Time:  1.984439500999997
 
-Test Time:  0.00023891700000433502
+Test Time:  0.00022925000000384443
+
+Pulsar Tree Selection
 
 Final Performance on Test Set
 MSE: 0.017877094972067038
@@ -22,9 +25,11 @@ F1 Score: 0.896774193548387
 weighted avg       0.98      0.98      0.98      1790
 
 
-Train Time:  0.6548698309999992
+Train Time:  0.6727622659999923
 
-Test Time:  0.0006045340000042643
+Test Time:  0.0005989909999897236
+
+Pulsar Tree Selection KMeans Clustered
 
 Final Performance on Test Set
 MSE: 0.04022346368715084
@@ -43,24 +48,26 @@ F1 Score: 0.7251908396946564
 weighted avg       0.96      0.96      0.96      1790
 
 
-Train Time:  0.5576187449999992
+Train Time:  0.479833603000003
 
-Test Time:  0.000622854999988931
+Test Time:  0.0005926089999945816
+
+Pulsar Tree Selection GMM Clustered
 
 Final Performance on Test Set
-MSE: 0.017877094972067038
+MSE: 0.04189944134078212
 
-Accuracy Score: 98.2122905027933%
+Accuracy Score: 95.81005586592178%
 
-F1 Score: 0.896774193548387
+F1 Score: 0.7967479674796748
 
               precision    recall  f1-score   support
 
-           0       0.98      1.00      0.99      1626
-           1       0.95      0.85      0.90       164
+           0       0.99      0.96      0.98      1626
+           1       0.72      0.90      0.80       164
 
-   micro avg       0.98      0.98      0.98      1790
-   macro avg       0.97      0.92      0.94      1790
-weighted avg       0.98      0.98      0.98      1790
+   micro avg       0.96      0.96      0.96      1790
+   macro avg       0.85      0.93      0.89      1790
+weighted avg       0.96      0.96      0.96      1790
 
 

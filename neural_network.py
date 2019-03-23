@@ -21,4 +21,4 @@ def run_nn(name, x_train, x_test, y_train, y_test):
         y=y_train,
         )
 
-    run_optimized(optimized_clf, x_train, y_train, x_test, y_test)
+    run_optimized(optimized_clf, x_train, y_train, x_test, y_test, name)

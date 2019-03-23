@@ -1,6 +1,8 @@
-Train Time:  0.2814155929999913
+Train Time:  0.26012480000002824
 
-Test Time:  0.000528981999991629
+Test Time:  0.0005334630000106699
+
+HMEQ
 
 Final Performance on Test Set
 MSE: 0.18624161073825504
@@ -20,5 +22,6 @@ weighted avg       0.80      0.81      0.75       596
 
 
 selected k: 3
+selected n_components: 8
 GMM Labels
-[0 2 0 ... 2 2 2]
+[2 1 2 ... 5 5 5]

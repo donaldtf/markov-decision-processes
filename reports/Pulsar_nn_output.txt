@@ -1,6 +1,8 @@
-Train Time:  1.785990667
+Train Time:  1.6336479050000001
 
-Test Time:  0.0018889409999989226
+Test Time:  0.0029379959999999983
+
+Pulsar
 
 Final Performance on Test Set
 MSE: 0.020670391061452513
@@ -20,5 +22,6 @@ weighted avg       0.98      0.98      0.98      1790
 
 
 selected k: 4
+selected n_components: 3
 GMM Labels
-[2 2 0 ... 3 2 3]
+[1 1 1 ... 0 2 0]
