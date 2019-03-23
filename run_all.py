@@ -65,12 +65,12 @@ def run_original(data_x, data_y, name):
 def run_data_set(get_data_fn, name):
     data_x, data_y = get_data_fn()
 
-#     run_original(data_x, data_y, name)
+    run_original(data_x, data_y, name)
 
     # Transforms
-#     run_transform("{} PCA".format(name), data_x, data_y, run_pca)
-#     run_transform("{} ICA".format(name), data_x, data_y, run_ica)
-#     run_transform("{} Tree Selection".format(name), data_x, data_y, run_tree_selection)
+    run_transform("{} PCA".format(name), data_x, data_y, run_pca)
+    run_transform("{} ICA".format(name), data_x, data_y, run_ica)
+    run_transform("{} Tree Selection".format(name), data_x, data_y, run_tree_selection)
 
     for i in range(1, 6):
         run_transform("{} RP Run {}".format(name, i), data_x, data_y, run_rp)

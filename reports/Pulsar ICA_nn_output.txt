@@ -1,57 +1,60 @@
-Number of components: 4
-selected k: 5
-selected n_components: 3
-GMM Labels
-[0 1 0 ... 2 1 2]
-Train Time:  3.568114805999997
+ICA
+[0.4894932014833127, 0.8635062042634425, 0.9007484542792059, 0.913168856135854, 0.912258064516129, 0.9278416347381865]
+6
+Kurtosis
+[ 4.83806426 -0.29865063 37.03334944 23.44860797  3.01587354 32.85291033]
+dropping index 1 with kurtosis of -0.298650631020811
+selected k for k means: 7
+selected n_components for gmm: 2
+Train Time:  4.822506568000001
 
-Test Time:  0.00042875699999456174
+Test Time:  0.0008290179999974612
 
 Pulsar ICA
 
 Final Performance on Test Set
-MSE: 0.024022346368715083
+MSE: 0.019553072625698324
 
-Accuracy Score: 97.5977653631285%
+Accuracy Score: 98.04469273743017%
 
-F1 Score: 0.8599348534201955
+F1 Score: 0.8867313915857605
 
               precision    recall  f1-score   support
 
-           0       0.98      0.99      0.99      1626
-           1       0.92      0.80      0.86       164
+           0       0.98      1.00      0.99      1626
+           1       0.94      0.84      0.89       164
 
    micro avg       0.98      0.98      0.98      1790
-   macro avg       0.95      0.90      0.92      1790
+   macro avg       0.96      0.92      0.94      1790
 weighted avg       0.98      0.98      0.98      1790
 
 
-Train Time:  0.49875286500000016
+Train Time:  0.6805716980000014
 
-Test Time:  0.0005956779999962691
+Test Time:  0.0005822959999974842
 
 Pulsar ICA KMeans Clustered
 
 Final Performance on Test Set
-MSE: 0.09162011173184358
+MSE: 0.06089385474860335
 
-Accuracy Score: 90.83798882681565%
+Accuracy Score: 93.91061452513966%
 
-F1 Score: 0.0
+F1 Score: 0.5067873303167421
 
               precision    recall  f1-score   support
 
-           0       0.91      1.00      0.95      1626
-           1       0.00      0.00      0.00       164
+           0       0.94      1.00      0.97      1626
+           1       0.98      0.34      0.51       164
 
-   micro avg       0.91      0.91      0.91      1790
-   macro avg       0.45      0.50      0.48      1790
-weighted avg       0.83      0.91      0.86      1790
+   micro avg       0.94      0.94      0.94      1790
+   macro avg       0.96      0.67      0.74      1790
+weighted avg       0.94      0.94      0.93      1790
 
 
-Train Time:  0.6320110150000033
+Train Time:  0.5062951330000018
 
-Test Time:  0.000611973999994575
+Test Time:  0.0006096059999975978
 
 Pulsar ICA GMM Clustered
 

@@ -60,7 +60,7 @@ def kmeans(name, x, y):
     encoded = pd.get_dummies(labels)
     plot_corr(name, encoded, y)
 
-    print ("selected k: " + str(optimal_k))
+    print ("selected k for k means: " + str(optimal_k))
 
     return encoded
 
@@ -94,15 +94,12 @@ def gmm(name, x, y):
     n_components = get_optimal_num_comps(name, x)
     gmm = GaussianMixture(n_components=n_components)
 
-    print ("selected n_components: " + str(n_components))
+    print ("selected n_components for gmm: " + str(n_components))
 
     gmm.fit(x)
     gmm_labels = gmm.predict(x)
 
     encoded = pd.get_dummies(gmm_labels)
     plot_corr(name, encoded, y)
-
-    print ("GMM Labels")
-    print (gmm_labels)
 
     return encoded
