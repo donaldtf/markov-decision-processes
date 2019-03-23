@@ -56,33 +56,6 @@ def get_hmeq_data():
 
     return x, y
 
-# Thanks to this link for some wonderful examples
-# https://scikit-learn.org/stable/auto_examples/model_selection/plot_grid_search_digits.html
-def get_optimized_classifier(estimator, tuned_parameters, x_train, y_train, cv=5, scoring="f1"):
-    clf = GridSearchCV(estimator=estimator, param_grid=tuned_parameters, cv=cv, scoring=scoring, n_jobs=-1)
-    clf.fit(x_train, y_train)
-
-    print("Best parameters set found on development set:")
-    print()
-    print(clf.best_params_)
-    print()
-    print("Grid scores on development set:")
-    print()
-    means = clf.cv_results_['mean_test_score']
-    stds = clf.cv_results_['std_test_score']
-    for mean, std, params in zip(means, stds, clf.cv_results_['params']):
-        print("%0.3f (+/-%0.03f) for %r"
-              % (mean, std * 2, params))
-    print()
-
-    print("Detailed classification report:")
-    print()
-    print("The model is trained on the full development set.")
-    print("The scores are computed on the full evaluation set.")
-    print()
-
-    return clf
-
 def compute_stats(y_true, y_pred):
     print ("Final Performance on Test Set")
     mse = mean_squared_error(y_true, y_pred)
@@ -179,36 +152,6 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=5,
     plt.plot(train_sizes, train_scores_mean, 'o-', color="r",
              label="Training score")
     plt.plot(train_sizes, test_scores_mean, 'o-', color="g",
-             label="Cross-validation score")
-
-    plt.legend(loc="best")
-
-    plt.savefig(file_name)
-
-def plot_iterations(estimator, title, X, y, param_name, param_range, ylim=None, cv=5,
-                        n_jobs=-1, scoring="f1", file_name="temp.png"):
-    plt.figure()
-    plt.title(title)
-    if ylim is not None:
-        plt.ylim(*ylim)
-    plt.xlabel(param_name)
-    plt.ylabel("F1 Score")
-    train_scores, test_scores = validation_curve(
-        estimator, X, y, param_name, param_range, cv=cv, n_jobs=n_jobs, scoring=scoring)
-    train_scores_mean = np.mean(train_scores, axis=1)
-    train_scores_std = np.std(train_scores, axis=1)
-    test_scores_mean = np.mean(test_scores, axis=1)
-    test_scores_std = np.std(test_scores, axis=1)
-    plt.grid()
-
-    plt.fill_between(param_range, train_scores_mean - train_scores_std,
-                     train_scores_mean + train_scores_std, alpha=0.1,
-                     color="r")
-    plt.fill_between(param_range, test_scores_mean - test_scores_std,
-                     test_scores_mean + test_scores_std, alpha=0.1, color="g")
-    plt.plot(param_range, train_scores_mean, 'o-', color="r",
-             label="Training score")
-    plt.plot(param_range, test_scores_mean, 'o-', color="g",
              label="Cross-validation score")
 
     plt.legend(loc="best")

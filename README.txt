@@ -6,9 +6,9 @@
 
 In order to recreate the results shown in my report, please clone the following repo from github.
 
-https://github.com/donaldtf/ml-supervised-learning
+https://github.com/donaldtf/ml-unsupervised-learning
 
-Or you can just use this command to clone it via ssh: `git clone git@github.com:donaldtf/ml-supervised-learning.git`
+Or you can just use this command to clone it via ssh: `git clone git@github.com:donaldtf/ml-unsupervised-learning.git`
 
 This repo contains all the code needed to reproduce my results, including the data sets that were used. The project structure looks like this:
 
@@ -29,25 +29,14 @@ The code relies on the following dependencies in order to run. You can install t
 - pandas
 - numpy
 - matplotlib
-- https://github.com/arvkevi/kneed
-
+- scipy
+- kneed (directions for installing found here: https://github.com/arvkevi/kneed)
 
 Once these are all installed you should be ready to run the code
 
-
 ### Running the code ###
 
-Running the code is simple once you have your dependencies installed. If you want to run a specific algorithm, simply run:
-
-`python {algorithm}.py` where algorithm is the name of the file you want to run. The available files are
-
-- boosting.py
-- decision_tree.py
-- knn.py
-- neural_network.py
-- svm.py
-
-Alternatively, if you would like to run all of the algorithms in bulk you can simply run:
+Running the code is simple once you have your dependencies installed. Simply run the following command
 
 `python run_all.py`
 

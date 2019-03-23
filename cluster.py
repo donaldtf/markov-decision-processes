@@ -19,6 +19,8 @@ def get_optimal_k(name, X):
         distortions.append(sum(np.min(cdist(X, kmeanModel.cluster_centers_, 'euclidean'), axis=1)) / X.shape[0])
         # distortions.append(kmeanModel.inertia_)
 
+    distortions = distortions / distortions[0]
+
     kneedle = KneeLocator(K, distortions, S=1.0, curve='convex', direction='decreasing')
     knee = math.floor(kneedle.knee)
 
@@ -28,8 +30,8 @@ def get_optimal_k(name, X):
     plt.axvline(x=knee, label="Selected K")
     plt.legend(loc="best")
     plt.xlabel('k')
-    plt.ylabel('Distortion')
-    plt.title('The Elbow Method showing the optimal k')
+    plt.ylabel('Normalized Average Distance')
+    plt.title('Elbow Curve for {}'.format(name))
     plt.savefig("elbow_curves/{}.png".format(name))
 
     return knee
