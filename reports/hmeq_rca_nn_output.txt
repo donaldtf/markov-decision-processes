@@ -1,24 +1,46 @@
-HMEQ_rca
-[[  61930.28915455   22299.06137628  -46769.49667072 -104906.04971856]
- [ 164027.95229383   56291.0806846  -111722.41354444 -237171.39783646]]
-Data Length: 5960
-Cluster 1: 4784
-Cluster 2: 1176
+Number of components: 6
+cluster_centers_
+[[  34630.7860038    13058.42346016  -28690.5416217   -67019.08851921
+   -13189.08844882  -39952.7492699 ]
+ [ 151969.10359088   52389.53971718 -104140.09821624 -220803.71988865
+   -73971.42135602 -141418.03870741]
+ [  78488.48242688   27204.91507252  -54811.92353688 -118475.69537295
+   -35887.72506411  -74256.54835898]]
+selected k: 3
+GMM Labels
+[0 0 0 ... 2 2 2]
+Best parameters set found on development set:
+
+{'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Grid scores on development set:
+
+0.132 (+/-0.310) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+Train Time:  0.13997532700000193
+
+Test Time:  0.00016126099998814425
+
 Final Performance on Test Set
-MSE: 0.3263422818791946
+MSE: 0.19630872483221476
 
-Accuracy Score: 67.36577181208054%
+Accuracy Score: 80.36912751677853%
 
-F1 Score: 0.17758985200845667
+F1 Score: 0.03305785123966942
 
               precision    recall  f1-score   support
 
-           0       0.80      0.80      0.80      4771
-           1       0.18      0.18      0.18      1189
+           0       0.80      1.00      0.89       477
+           1       1.00      0.02      0.03       119
 
-   micro avg       0.67      0.67      0.67      5960
-   macro avg       0.49      0.49      0.49      5960
-weighted avg       0.67      0.67      0.67      5960
+   micro avg       0.80      0.80      0.80       596
+   macro avg       0.90      0.51      0.46       596
+weighted avg       0.84      0.80      0.72       596
 
 
 Best parameters set found on development set:
@@ -27,31 +49,65 @@ Best parameters set found on development set:
 
 Grid scores on development set:
 
-0.217 (+/-0.011) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+0.000 (+/-0.000) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
 
 Detailed classification report:
 
 The model is trained on the full development set.
 The scores are computed on the full evaluation set.
 
-Train Time:  0.11645348100000774
+Train Time:  0.14255482599998004
 
-Test Time:  0.00016985899999610865
+Test Time:  0.0001532210000050327
 
 Final Performance on Test Set
-MSE: 0.3959731543624161
+MSE: 0.19966442953020133
 
-Accuracy Score: 60.40268456375839%
+Accuracy Score: 80.03355704697987%
 
-F1 Score: 0.2080536912751678
+F1 Score: 0.0
 
               precision    recall  f1-score   support
 
-           0       0.79      0.69      0.74       477
-           1       0.17      0.26      0.21       119
+           0       0.80      1.00      0.89       477
+           1       0.00      0.00      0.00       119
 
-   micro avg       0.60      0.60      0.60       596
-   macro avg       0.48      0.48      0.47       596
-weighted avg       0.67      0.60      0.63       596
+   micro avg       0.80      0.80      0.80       596
+   macro avg       0.40      0.50      0.44       596
+weighted avg       0.64      0.80      0.71       596
+
+
+Best parameters set found on development set:
+
+{'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Grid scores on development set:
+
+0.000 (+/-0.000) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+Train Time:  0.09549426299997776
+
+Test Time:  0.00014573800001471682
+
+Final Performance on Test Set
+MSE: 0.19966442953020133
+
+Accuracy Score: 80.03355704697987%
+
+F1 Score: 0.0
+
+              precision    recall  f1-score   support
+
+           0       0.80      1.00      0.89       477
+           1       0.00      0.00      0.00       119
+
+   micro avg       0.80      0.80      0.80       596
+   macro avg       0.40      0.50      0.44       596
+weighted avg       0.64      0.80      0.71       596
 
 

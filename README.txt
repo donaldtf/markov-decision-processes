@@ -29,16 +29,8 @@ The code relies on the following dependencies in order to run. You can install t
 - pandas
 - numpy
 - matplotlib
+- https://github.com/arvkevi/kneed
 
-For example, you could follow these steps to get it working with conda
-
-1. Install Miniconda: https://conda.io/miniconda.html
-2. Create a virtual environment and activate it
-3. Run the following commands
-    - conda install scikit-learn
-    - conda install pandas
-    - conda install matplotlib
-    - conda install numpy
 
 Once these are all installed you should be ready to run the code
 

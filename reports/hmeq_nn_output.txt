@@ -1,34 +1,13 @@
-Best parameters set found on development set:
-
-{'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
-
-Grid scores on development set:
-
-0.353 (+/-0.278) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
-
-Detailed classification report:
-
-The model is trained on the full development set.
-The scores are computed on the full evaluation set.
-
-Train Time:  0.31453715799999316
-
-Test Time:  0.00055874100000608
-
-Final Performance on Test Set
-MSE: 0.18624161073825504
-
-Accuracy Score: 81.3758389261745%
-
-F1 Score: 0.18978102189781024
-
-              precision    recall  f1-score   support
-
-           0       0.82      0.99      0.89       477
-           1       0.72      0.11      0.19       119
-
-   micro avg       0.81      0.81      0.81       596
-   macro avg       0.77      0.55      0.54       596
-weighted avg       0.80      0.81      0.75       596
-
-
+cluster_centers_
+[[1.69668036e+04 3.25520174e+04 5.95462455e+04 5.62359970e-01
+  9.32785661e-01 8.03452203e+00 1.31067961e-01 2.99850635e-01
+  1.58927436e+02 9.30918596e-01 1.67031367e+01 2.36086339e+01]
+ [2.59039945e+04 1.53243019e+05 2.13979682e+05 6.62534435e-01
+  2.97520661e+00 7.86212121e+00 5.64738292e-02 3.04407713e-01
+  2.03091046e+02 9.24242424e-01 2.58911846e+01 2.84188699e+01]
+ [1.82551252e+04 7.94120168e+04 1.09691755e+05 6.60798122e-01
+  1.79929577e+00 8.15430360e+00 9.27230047e-02 3.18466354e-01
+  1.73192181e+02 1.09154930e+00 2.28665884e+01 2.87191399e+01]]
+selected k: 3
+GMM Labels
+[0 2 0 ... 2 2 2]

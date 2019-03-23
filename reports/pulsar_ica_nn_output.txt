@@ -1,26 +1,14 @@
-Pulsar_ica
-[[ 1.24840092e-03 -1.57431853e-03 -1.55027713e-03 -4.77029690e-05]
- [-9.03883651e-03  1.13985881e-02  1.12245203e-02  3.45385309e-04]]
-Data Length: 17898
-Cluster 1: 15728
-Cluster 2: 2170
-Final Performance on Test Set
-MSE: 0.08945133534473125
-
-Accuracy Score: 91.05486646552687%
-
-F1 Score: 0.5796797059595694
-
-              precision    recall  f1-score   support
-
-           0       0.97      0.93      0.95     16259
-           1       0.51      0.67      0.58      1639
-
-   micro avg       0.91      0.91      0.91     17898
-   macro avg       0.74      0.80      0.76     17898
-weighted avg       0.92      0.91      0.92     17898
-
-
+Number of components: 4
+cluster_centers_
+[[ 0.00104401  0.00055461 -0.00460327  0.00302798]
+ [ 0.00098124 -0.00508035  0.00116456 -0.0001194 ]
+ [ 0.00114276  0.02017483  0.00255513  0.00056778]
+ [ 0.00108239 -0.00045813 -0.00154395 -0.02236553]
+ [ 0.00076263  0.00294565  0.020954    0.0013535 ]
+ [-0.0388832   0.0030465   0.00368787  0.0019093 ]]
+selected k: 6
+GMM Labels
+[0 0 0 ... 1 0 2]
 Best parameters set found on development set:
 
 {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
@@ -34,9 +22,9 @@ Detailed classification report:
 The model is trained on the full development set.
 The scores are computed on the full evaluation set.
 
-Train Time:  3.807409660999994
+Train Time:  3.555463810000006
 
-Test Time:  0.00035154500000089683
+Test Time:  0.000414646000010066
 
 Final Performance on Test Set
 MSE: 0.02569832402234637
@@ -53,5 +41,73 @@ F1 Score: 0.8476821192052981
    micro avg       0.97      0.97      0.97      1790
    macro avg       0.95      0.89      0.92      1790
 weighted avg       0.97      0.97      0.97      1790
+
+
+Best parameters set found on development set:
+
+{'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Grid scores on development set:
+
+0.756 (+/-0.048) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+Train Time:  1.8435959170000018
+
+Test Time:  0.0002119720000024472
+
+Final Performance on Test Set
+MSE: 0.034636871508379886
+
+Accuracy Score: 96.53631284916202%
+
+F1 Score: 0.8109756097560975
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.98      0.98      1626
+           1       0.81      0.81      0.81       164
+
+   micro avg       0.97      0.97      0.97      1790
+   macro avg       0.90      0.90      0.90      1790
+weighted avg       0.97      0.97      0.97      1790
+
+
+Best parameters set found on development set:
+
+{'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Grid scores on development set:
+
+0.000 (+/-0.000) for {'alpha': 0.001, 'hidden_layer_sizes': 11, 'max_iter': 1000, 'random_state': 99}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+Train Time:  1.5962085049999928
+
+Test Time:  0.0003052819999993517
+
+Final Performance on Test Set
+MSE: 0.09162011173184358
+
+Accuracy Score: 90.83798882681565%
+
+F1 Score: 0.0
+
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95      1626
+           1       0.00      0.00      0.00       164
+
+   micro avg       0.91      0.91      0.91      1790
+   macro avg       0.45      0.50      0.48      1790
+weighted avg       0.83      0.91      0.86      1790
 
 
