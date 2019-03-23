@@ -1,34 +1,33 @@
-Number of components: 4
 selected k: 4
 selected n_components: 3
 GMM Labels
-[2 1 2 ... 0 1 0]
-Train Time:  1.7068119209999963
+[0 0 0 ... 2 1 2]
+Train Time:  1.8219101779999995
 
-Test Time:  0.00025053699999944
+Test Time:  0.0002472980000014502
 
 Pulsar PCA
 
 Final Performance on Test Set
-MSE: 0.021229050279329607
+MSE: 0.0223463687150838
 
-Accuracy Score: 97.87709497206704%
+Accuracy Score: 97.76536312849163%
 
-F1 Score: 0.8758169934640523
+F1 Score: 0.869281045751634
 
               precision    recall  f1-score   support
 
-           0       0.98      1.00      0.99      1626
-           1       0.94      0.82      0.88       164
+           0       0.98      0.99      0.99      1626
+           1       0.94      0.81      0.87       164
 
    micro avg       0.98      0.98      0.98      1790
-   macro avg       0.96      0.91      0.93      1790
+   macro avg       0.96      0.90      0.93      1790
 weighted avg       0.98      0.98      0.98      1790
 
 
-Train Time:  0.5781634689999962
+Train Time:  0.4441797130000005
 
-Test Time:  0.0006155889999988062
+Test Time:  0.0006032610000019645
 
 Pulsar PCA KMeans Clustered
 
@@ -49,9 +48,9 @@ F1 Score: 0.0
 weighted avg       0.83      0.91      0.86      1790
 
 
-Train Time:  0.536261838999998
+Train Time:  0.5966375729999989
 
-Test Time:  0.0006091459999950644
+Test Time:  0.0005894809999986705
 
 Pulsar PCA GMM Clustered
 

@@ -1,34 +1,33 @@
-Number of components: 6
 selected k: 3
-selected n_components: 2
+selected n_components: 8
 GMM Labels
-[1 1 1 ... 0 0 0]
-Train Time:  0.25270378599998367
+[0 0 0 ... 5 5 5]
+Train Time:  0.5118105649999976
 
-Test Time:  0.00016478899999583518
+Test Time:  0.00014492100000040864
 
 HMEQ PCA
 
 Final Performance on Test Set
-MSE: 0.31543624161073824
+MSE: 0.28859060402684567
 
-Accuracy Score: 68.45637583892618%
+Accuracy Score: 71.14093959731544%
 
-F1 Score: 0.2769230769230769
+F1 Score: 0.3676470588235294
 
               precision    recall  f1-score   support
 
-           0       0.82      0.78      0.80       477
-           1       0.26      0.30      0.28       119
+           0       0.84      0.78      0.81       477
+           1       0.33      0.42      0.37       119
 
-   micro avg       0.68      0.68      0.68       596
-   macro avg       0.54      0.54      0.54       596
-weighted avg       0.71      0.68      0.69       596
+   micro avg       0.71      0.71      0.71       596
+   macro avg       0.59      0.60      0.59       596
+weighted avg       0.74      0.71      0.72       596
 
 
-Train Time:  0.34978217399998357
+Train Time:  0.21205868599999889
 
-Test Time:  0.0005429009999602386
+Test Time:  0.0004640960000017458
 
 HMEQ PCA KMeans Clustered
 
@@ -49,9 +48,9 @@ F1 Score: 0.0
 weighted avg       0.64      0.80      0.71       596
 
 
-Train Time:  0.16365511300000435
+Train Time:  0.23869468899999902
 
-Test Time:  0.0005256789999634748
+Test Time:  0.0005253659999979732
 
 HMEQ PCA GMM Clustered
 

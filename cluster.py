@@ -8,7 +8,7 @@ mpl.use('agg')
 import matplotlib.pyplot as plt
 import math
 import numpy as np
-from kneed import DataGenerator, KneeLocator
+from kneed import KneeLocator
 
 # https://towardsdatascience.com/feature-selection-with-pandas-e3690ad8504b
 def plot_corr(name, x, y):
