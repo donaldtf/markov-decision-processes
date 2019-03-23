@@ -1,0 +1,75 @@
+Distribution of Eigen Values
+[5.04032212e+09 6.32939930e+08 1.11128096e+08 8.28326847e+03
+ 2.51991891e+02 8.62996638e+01 5.68877162e+01 3.01226112e+00
+ 2.69556362e+00 1.21587357e+00 6.96476178e-01 2.90649308e-01]
+selected k for k means: 3
+selected n_components for gmm: 6
+Train Time:  0.3258524019999527
+
+Test Time:  0.00017099999996617044
+
+HMEQ PCA
+
+Final Performance on Test Set
+MSE: 0.34731543624161076
+
+Accuracy Score: 65.26845637583892%
+
+F1 Score: 0.26334519572953735
+
+              precision    recall  f1-score   support
+
+           0       0.81      0.74      0.77       477
+           1       0.23      0.31      0.26       119
+
+   micro avg       0.65      0.65      0.65       596
+   macro avg       0.52      0.52      0.52       596
+weighted avg       0.69      0.65      0.67       596
+
+
+Train Time:  0.25603944099998444
+
+Test Time:  0.0006124549999526607
+
+HMEQ PCA KMeans Clustered
+
+Final Performance on Test Set
+MSE: 0.19966442953020133
+
+Accuracy Score: 80.03355704697987%
+
+F1 Score: 0.0
+
+              precision    recall  f1-score   support
+
+           0       0.80      1.00      0.89       477
+           1       0.00      0.00      0.00       119
+
+   micro avg       0.80      0.80      0.80       596
+   macro avg       0.40      0.50      0.44       596
+weighted avg       0.64      0.80      0.71       596
+
+
+Train Time:  0.26124979300004725
+
+Test Time:  0.0005715450000138844
+
+HMEQ PCA GMM Clustered
+
+Final Performance on Test Set
+MSE: 0.19798657718120805
+
+Accuracy Score: 80.20134228187919%
+
+F1 Score: 0.016666666666666666
+
+              precision    recall  f1-score   support
+
+           0       0.80      1.00      0.89       477
+           1       1.00      0.01      0.02       119
+
+   micro avg       0.80      0.80      0.80       596
+   macro avg       0.90      0.50      0.45       596
+weighted avg       0.84      0.80      0.72       596
+
+

@@ -41,4 +41,6 @@ Running the code is simple once you have your dependencies installed. Simply run
 
 `python run_all.py`
 
-Note: Running all of the algorithms at once may take several minutes (5 - 10 minutes, depending on your machine) to complete.
+This will generate all of the plots shown in the report, plus other plots that were excluded from the report due to the constraint on report length.
+
+Note: Running all of the algorithms at once may take several minutes (10 - 15 minutes, depending on your machine) to complete.

@@ -95,12 +95,19 @@ def run_ica(x, y, name):
     print ("Kurtosis")
     print(kurt)
 
+    print(new_x.shape)
+    drop_cols = []
+
     for i in range(0, len(kurt)):
         k = kurt[i]
 
         if abs(k) < 1:
             print ("dropping index {} with kurtosis of {}".format(i, k))
-            new_x.drop(i, axis=1)
+            drop_cols.append(i)
+
+    new_x = new_x.drop(new_x.columns[drop_cols], axis=1)
+    
+    print(new_x.shape)
 
     return new_x
 

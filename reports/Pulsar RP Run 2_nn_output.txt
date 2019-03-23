@@ -1,0 +1,72 @@
+Number of components: 4
+selected k for k means: 4
+selected n_components for gmm: 3
+Train Time:  1.791250615999985
+
+Test Time:  0.0003105299999788258
+
+Pulsar RP Run 2
+
+Final Performance on Test Set
+MSE: 0.024581005586592177
+
+Accuracy Score: 97.54189944134079%
+
+F1 Score: 0.8543046357615893
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.99      1626
+           1       0.93      0.79      0.85       164
+
+   micro avg       0.98      0.98      0.98      1790
+   macro avg       0.96      0.89      0.92      1790
+weighted avg       0.97      0.98      0.97      1790
+
+
+Train Time:  0.4843066980000117
+
+Test Time:  0.0006102789999999914
+
+Pulsar RP Run 2 KMeans Clustered
+
+Final Performance on Test Set
+MSE: 0.09162011173184358
+
+Accuracy Score: 90.83798882681565%
+
+F1 Score: 0.0
+
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95      1626
+           1       0.00      0.00      0.00       164
+
+   micro avg       0.91      0.91      0.91      1790
+   macro avg       0.45      0.50      0.48      1790
+weighted avg       0.83      0.91      0.86      1790
+
+
+Train Time:  0.5008870119999926
+
+Test Time:  0.0006230930000015178
+
+Pulsar RP Run 2 GMM Clustered
+
+Final Performance on Test Set
+MSE: 0.09162011173184358
+
+Accuracy Score: 90.83798882681565%
+
+F1 Score: 0.0
+
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95      1626
+           1       0.00      0.00      0.00       164
+
+   micro avg       0.91      0.91      0.91      1790
+   macro avg       0.45      0.50      0.48      1790
+weighted avg       0.83      0.91      0.86      1790
+
+

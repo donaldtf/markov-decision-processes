@@ -1,78 +1,80 @@
 ICA
-[0.24504768892149667, 0.3992015968063872, 0.4959298685034439, 0.5781990521327014, 0.8003541389995573, 0.8348909657320872]
+[0.24504768892149667, 0.3892255892255892, 0.4896681277395116, 0.5909358446144791, 0.8183041722745626, 0.8198037466547724]
 6
 Kurtosis
-[  7.83689937   8.65594222 164.45987081   0.90240518   2.95260246
-   8.22579655]
-dropping index 3 with kurtosis of 0.9024051812107219
-selected k for k means: 6
+[  2.95504761 165.23310078   8.22445247   8.64723629   7.80242118
+   0.89969571]
+(5960, 6)
+dropping index 5 with kurtosis of 0.8996957116413551
+(5960, 5)
+selected k for k means: 5
 selected n_components for gmm: 3
-Train Time:  1.6974901590000044
+Train Time:  2.295752173999972
 
-Test Time:  0.0006394890000009923
+Test Time:  0.0005510660000140888
 
 HMEQ ICA
 
 Final Performance on Test Set
-MSE: 0.1644295302013423
+MSE: 0.1593959731543624
 
-Accuracy Score: 83.55704697986577%
+Accuracy Score: 84.06040268456377%
 
-F1 Score: 0.5
+F1 Score: 0.527363184079602
 
               precision    recall  f1-score   support
 
            0       0.87      0.94      0.90       477
-           1       0.64      0.41      0.50       119
+           1       0.65      0.45      0.53       119
 
    micro avg       0.84      0.84      0.84       596
-   macro avg       0.75      0.68      0.70       596
-weighted avg       0.82      0.84      0.82       596
+   macro avg       0.76      0.69      0.72       596
+weighted avg       0.83      0.84      0.83       596
 
 
-Train Time:  0.3382155179999984
+Train Time:  0.24261361899999656
 
-Test Time:  0.000548899999998298
+Test Time:  0.0005417819999706808
 
 HMEQ ICA KMeans Clustered
 
 Final Performance on Test Set
-MSE: 0.1644295302013423
+MSE: 0.17114093959731544
 
-Accuracy Score: 83.55704697986577%
+Accuracy Score: 82.88590604026845%
 
-F1 Score: 0.5739130434782609
+F1 Score: 0.5603448275862069
 
               precision    recall  f1-score   support
 
-           0       0.89      0.91      0.90       477
-           1       0.59      0.55      0.57       119
+           0       0.89      0.90      0.89       477
+           1       0.58      0.55      0.56       119
 
-   micro avg       0.84      0.84      0.84       596
-   macro avg       0.74      0.73      0.74       596
-weighted avg       0.83      0.84      0.83       596
+   micro avg       0.83      0.83      0.83       596
+   macro avg       0.73      0.72      0.73       596
+weighted avg       0.83      0.83      0.83       596
 
 
-Train Time:  0.3082742940000003
+Train Time:  0.2909594569999854
 
-Test Time:  0.0005392740000047525
+Test Time:  0.0005246459999739272
 
 HMEQ ICA GMM Clustered
 
 Final Performance on Test Set
-MSE: 0.16275167785234898
+MSE: 0.16778523489932887
 
-Accuracy Score: 83.7248322147651%
+Accuracy Score: 83.22147651006712%
 
-F1 Score: 0.5764192139737991
+F1 Score: 0.5412844036697246
 
               precision    recall  f1-score   support
 
-           0       0.89      0.91      0.90       477
-           1       0.60      0.55      0.58       119
+           0       0.88      0.92      0.90       477
+           1       0.60      0.50      0.54       119
 
-   micro avg       0.84      0.84      0.84       596
-   macro avg       0.75      0.73      0.74       596
-weighted avg       0.83      0.84      0.83       596
+   micro avg       0.83      0.83      0.83       596
+   macro avg       0.74      0.71      0.72       596
+weighted avg       0.82      0.83      0.83       596
 
 

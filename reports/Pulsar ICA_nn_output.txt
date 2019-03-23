@@ -1,37 +1,38 @@
 ICA
-[0.4894932014833127, 0.8635062042634425, 0.9007484542792059, 0.913168856135854, 0.912258064516129, 0.9278416347381865]
+[0.4894932014833127, 0.8620906801007556, 0.9032675509543837, 0.9152542372881356, 0.9153524299967815, 0.9277493606138107]
 6
 Kurtosis
-[ 4.83806426 -0.29865063 37.03334944 23.44860797  3.01587354 32.85291033]
-dropping index 1 with kurtosis of -0.298650631020811
+[ 1.57849959 23.45456599  4.77475188 36.63327466  1.49687501 32.10018936]
+(17898, 6)
+(17898, 6)
 selected k for k means: 7
-selected n_components for gmm: 2
-Train Time:  4.822506568000001
+selected n_components for gmm: 3
+Train Time:  4.707830802000004
 
-Test Time:  0.0008290179999974612
+Test Time:  0.0007849380000095607
 
 Pulsar ICA
 
 Final Performance on Test Set
-MSE: 0.019553072625698324
+MSE: 0.01899441340782123
 
-Accuracy Score: 98.04469273743017%
+Accuracy Score: 98.10055865921787%
 
-F1 Score: 0.8867313915857605
+F1 Score: 0.8903225806451612
 
               precision    recall  f1-score   support
 
            0       0.98      1.00      0.99      1626
-           1       0.94      0.84      0.89       164
+           1       0.95      0.84      0.89       164
 
    micro avg       0.98      0.98      0.98      1790
    macro avg       0.96      0.92      0.94      1790
 weighted avg       0.98      0.98      0.98      1790
 
 
-Train Time:  0.6805716980000014
+Train Time:  0.8168592170000011
 
-Test Time:  0.0005822959999974842
+Test Time:  0.0006243379999943954
 
 Pulsar ICA KMeans Clustered
 
@@ -52,26 +53,26 @@ F1 Score: 0.5067873303167421
 weighted avg       0.94      0.94      0.93      1790
 
 
-Train Time:  0.5062951330000018
+Train Time:  0.6068011330000047
 
-Test Time:  0.0006096059999975978
+Test Time:  0.0006043759999982967
 
 Pulsar ICA GMM Clustered
 
 Final Performance on Test Set
-MSE: 0.09162011173184358
+MSE: 0.025139664804469275
 
-Accuracy Score: 90.83798882681565%
+Accuracy Score: 97.48603351955308%
 
-F1 Score: 0.0
+F1 Score: 0.8484848484848484
 
               precision    recall  f1-score   support
 
-           0       0.91      1.00      0.95      1626
-           1       0.00      0.00      0.00       164
+           0       0.98      1.00      0.99      1626
+           1       0.95      0.77      0.85       164
 
-   micro avg       0.91      0.91      0.91      1790
-   macro avg       0.45      0.50      0.48      1790
-weighted avg       0.83      0.91      0.86      1790
+   micro avg       0.97      0.97      0.97      1790
+   macro avg       0.96      0.88      0.92      1790
+weighted avg       0.97      0.97      0.97      1790
 
 
