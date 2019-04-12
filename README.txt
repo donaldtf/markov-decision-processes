@@ -6,22 +6,13 @@
 
 In order to recreate the results shown in my report, please clone the following repo from github.
 
-https://github.com/donaldtf/ml-unsupervised-learning
+https://github.com/donaldtf/markov-decision-processes
 
-Or you can just use this command to clone it via ssh: `git clone git@github.com:donaldtf/ml-unsupervised-learning.git`
+Or you can just use this command to clone it via ssh: `git clone git@github.com:donaldtf/markov-decision-processes.git`
 
 This repo contains all the code needed to reproduce my results, including the data sets that were used. The project structure looks like this:
 
-/data - this holds the two data sets (hmeq and pulsar_stars) that are used with each algorithm
-/elbow_curves - kmeans elbow curves are output to this directory
-/features - this holds the correlation matrixes for features
-/images - learning curves for each algorithm are output into this directory
-/pca_curves - holds images that show the selected number of components for PCA
-/reports - while running each algorithm, I feed the standard output into a report file here instead of to the console.
-           This file holds stats on grid search results, test data performance and wall clock times
-/utils.py - this is a utility file that holds shared functionality between the algorithms 
-            (loading and prepping data, plotting learning curves, etc)
-
+/folder
 
 ### Install Dependencies ###
 
@@ -33,7 +24,6 @@ The code relies on the following dependencies in order to run. You can install t
 - matplotlib
 - scipy
 - seaborn
-- kneed (directions for installing found here: https://github.com/arvkevi/kneed)
 
 Once these are all installed you should be ready to run the code
 
