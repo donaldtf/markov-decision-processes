@@ -39,7 +39,6 @@ def extract_policy(env, v, gamma = 1.0):
         policy[s] = np.argmax(q_sa)
     return policy
 
-# This code was not borrowed from anywhere and is of my own making
 def plot_results(result, result_label, other, other_label, title, file_name):
     plt.figure()
     plt.title(title)
