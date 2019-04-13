@@ -8,12 +8,9 @@ Solving FrozenLake8x8 environment using Policy iteration.
 Author : Moustafa Alzantot (malzantot@ucla.edu)
 """
 import numpy as np
-import gym
-from gym import wrappers
 import matplotlib as mpl
 mpl.use('agg')
 import matplotlib.pyplot as plt
-import timeit
 
 def run_episode(env, policy, gamma = 1.0):
     """ Runs an episode and return the total reward """

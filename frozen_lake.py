@@ -1,3 +1,5 @@
+import timeit
+
 from value_iteration import run_value_iteration
 from policy_iteration import run_policy_iteration
 from q_learning import run_q_learning
