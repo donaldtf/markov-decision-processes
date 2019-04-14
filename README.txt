@@ -37,4 +37,4 @@ Running the code is simple once you have your dependencies installed. Simply run
 
 This will generate all of the plots shown in the report.
 
-Note: Running all of the algorithms at once may take 10 - 15 minutes, depending on your machine, to complete.
+Note: Running all of the algorithms at once may take 15 - 20 minutes, depending on your machine, to complete.
